@@ -6,7 +6,7 @@ const forecast = document.querySelector('#forecast');
 
 // ^=============== APP VARIABLES ===============
 // weather API
-const APIKey = '0504276985d1463eaa6155223233112';
+const APIKey = '06f1a6093a3a422fb5d160347252906';
 const baseURL = 'https://api.weatherapi.com/v1/forecast.json';
 
 let searchLocation = '';
@@ -98,7 +98,7 @@ async function displayWeather() {
           <div class=" forecast today rounded  rounded-3">
               <div id="today" class="forecast-header px-3  d-flex justify-content-between">
                   <div class="day fw-semibold">${handleDay(locationObj.localtime)}</div>
-                  <div class="date text-light">${new Date(locationObj.localtime.split(' ')[0]).getDay()} ${handleMonth(locationObj.localtime.split(' ')[0])}</div>
+                  <div class="date text-light">${new Date(locationObj.localtime).getDate()} ${handleMonth(locationObj.localtime)}</div>
                   </div>
                   <div id="current" class="forecast-content  px-3">
                   <div class="location fs-4">${locationObj.country},${locationObj.name}</div>
